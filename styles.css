@@ -1,0 +1,73 @@
+date-picker {
+  display: block;
+  width: 300px;
+  position: relative; }
+
+.ng2-datepicker {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  background-color: white; }
+  .ng2-datepicker__header {
+    display: flex;
+    background: #555555;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #aaa; }
+    .ng2-datepicker__header label {
+      flex: 5; }
+    .ng2-datepicker__header-control {
+      flex: 1;
+      width: 3em;
+      text-align: center;
+      cursor: pointer; }
+  .ng2-datepicker__weekdays {
+    display: flex;
+    flex-flow: row; }
+    .ng2-datepicker__weekdays span {
+      color: #aaa;
+      line-height: 2em;
+      flex: 1;
+      text-align: center; }
+  .ng2-datepicker__calendar {
+    display: flex;
+    flex-flow: column nowrap; }
+    .ng2-datepicker__calendar > span {
+      flex: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-content: center; }
+      .ng2-datepicker__calendar > span > span {
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+        line-height: 2em; }
+        .ng2-datepicker__calendar > span > span:hover {
+          color: white;
+          background: #aaa; }
+        .ng2-datepicker__calendar > span > span.pad {
+          background: #e0e0e0; }
+        .ng2-datepicker__calendar > span > span.disabled {
+          cursor: auto;
+          color: #e0e0e0; }
+          .ng2-datepicker__calendar > span > span.disabled:hover {
+            color: #e0e0e0;
+            background-color: inherit; }
+        .ng2-datepicker__calendar > span > span.empty {
+          cursor: auto;
+          background-color: inherit; }
+        .ng2-datepicker__calendar > span > span.selDate {
+          color: white;
+          background: #f96302; }
+        .ng2-datepicker__calendar > span > span.today {
+          color: white;
+          background-color: #6eafbf; }
+
+body, html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/*# sourceMappingURL=styles.css.map */
