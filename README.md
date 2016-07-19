@@ -1,7 +1,7 @@
-==Angular2 DatePicker Component
+## Angular2 DatePicker Component
 
 Simple Datepicker component for AngularJS 2.
 
-===Install
+###Install
 `npm install`
 `npm start`
