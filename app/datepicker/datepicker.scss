@@ -1,0 +1,98 @@
+$color: #467b89;
+$color-alt: #6eafbf;
+$color-highlite: #f96302;
+$color-gray-light: #e0e0e0;
+$color-gray-dark: #aaa;
+$color-gray-darker: #555555;
+
+date-picker {
+  display: block;
+  width: 300px;
+  position: relative;
+}
+.ng2-datepicker-picker {}
+.ng2-datepicker {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+
+  border: 1px solid $color-gray-light;
+  background-color: white;
+
+  &__header {
+    display: flex;
+    background: $color-gray-darker;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid $color-gray-dark;
+    label {
+      flex: 5;
+    }
+    &-control {
+      flex: 1;
+      width: 3em;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  &__weekdays {
+    display: flex;
+    flex-flow: row;
+    span {
+      color: $color-gray-dark;
+      line-height: 2em;
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  &__calendar {
+    display: flex;
+    flex-flow: column nowrap;
+    > span {
+      flex: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-content: center;
+      > span {
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+        line-height: 2em;
+
+        &:hover {
+          color: white;
+          background: $color-gray-dark;
+        }
+        &.pad {
+          background: $color-gray-light;
+        }
+        &.disabled {
+          cursor: auto;
+          color: $color-gray-light;
+          &:hover {
+            color: $color-gray-light;
+            background-color: inherit;
+          }
+        }
+        &.empty {
+          cursor: auto;
+          background-color: inherit;
+        }
+        &.selDate {
+          color: white;
+          background: $color-highlite;
+        }
+
+        &.today {
+          color: white;
+          background-color: $color-alt;
+        }
+      }
+    }
+  }
+}

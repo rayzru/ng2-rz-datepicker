@@ -1,0 +1,25 @@
+<div class="wrapper">
+	<input #dateText type='text' value={{pickerDate}} readonly/>
+	<button (click)='openDatePicker()'>Open</button>
+	<div class="ng2-datepicker" [style.display]="showDp">
+		<header class="ng2-datepicker__header">
+			<span class='ng2-datepicker__header-control' (click)='setPrevMonth()'>&laquo;</span>
+			<label>{{currMonth}} {{currYear}}</label>
+			<span class='ng2-datepicker__header-control' (click)='setNextMonth(this)'>&raquo;</span>
+		</header>
+		<div class="ng2-datepicker__weekdays">
+			<span *ngFor="let day of daysofWeek">{{day}}</span>
+		</div>
+		<div class="ng2-datepicker__calendar">
+  <span *ngFor="let date of dates">
+    <span *ngFor="let d of date"
+		  (click)='setDate(d)'
+		  [class.disabled]='d.disabled'
+		  [class.today]='d.today'
+		  [class.selDate]='d.selected'
+		  [class.empty]='d.empty'>{{d.date}}
+    </span>
+  </span>
+		</div>
+	</div>
+</div>
